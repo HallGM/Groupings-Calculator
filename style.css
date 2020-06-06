@@ -1,0 +1,73 @@
+body {
+  background-color: #52796f;
+  color: #2f3e46;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight:
+}
+
+input[type="text"], input[type="number"], textarea {
+  background-color: white;
+}
+
+.container {
+  background-color: whitesmoke;
+  padding: 20px;
+  border-style: solid;
+  border-width: 2px;
+}
+
+.success, .error {
+  padding: 5px;
+  margin: 5px 0 15px 0;
+}
+
+.success {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #52796f;
+  color: #52796f;
+}
+
+.error {
+  color: red;
+  border-style: solid;
+  border-width: 1px;
+  border-color: red;
+}
+
+.group {
+  min-width: 230px;
+  margin: 20px;
+  padding: 10px;
+  border-width: 2px;
+  background-color: #cad2c5;
+  text-align: center;
+}
+
+.group ul {
+  list-style-type: none;
+}
+
+.input-field {
+  padding-right: 10px;
+}
+
+#questionnaire {
+  display: flex;
+  flex-wrap: wrap
+}
+
+#results-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* For Testing Only */
+
+#random-data {
+  display: none;
+}
