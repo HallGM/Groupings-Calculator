@@ -2,6 +2,8 @@
 
 This project was created in collaboration with the Extinction Rebellion Glasgow. Workshop participants are placed into groups based on answers provided to a survey. The Groupings Calculator takes in a list of 8 or more participants who have answered three questions with numerical answers from 1 to 10. It then places them into groups where people with the most similar answers are grouped together.
 
+[Click here to go to app](https://hallgm.github.io/Groupings-Calculator/)
+
 # How the Algorithm Works:
 
 Participants are put into groups - randomly at first. They are put into groups of 5, where any remainders are added to the first few groups to make groups of 6. In some cases, groups of 4 are used if the numbers are awkward. These exceptions are when there are  8, 9, 13, 14 or 19 participants. Less than 8 does not work.
