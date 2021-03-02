@@ -1,10 +1,9 @@
 //CLASS UI constructor
 class UI {
-
   //FUNCTION: function that adds new candidate to UI
   addNewCandidate(candidate) {
     //create the row
-    const row = document.createElement('tr');
+    const row = document.createElement("tr");
     row.innerHTML = `
       <td>${candidate.firstName}</td>
       <td>${candidate.q1answer}</td>
@@ -20,17 +19,16 @@ class UI {
   // FUNCTION:create function to clear the inputs
   clearInputs() {
     //Get values from the form
-    document.querySelector('#first-name').value = "";
-    document.querySelector('#question1').value = "";
-    document.querySelector('#question2').value = "";
-    document.querySelector('#question3').value = "";
+    document.querySelector("#first-name").value = "";
+    document.querySelector("#question1").value = "";
+    document.querySelector("#question2").value = "";
+    document.querySelector("#question3").value = "";
   }
 
   // FUNCTION: message function
   message(message, className, scroll) {
-
     //get any current message if there is one
-    const currentMessage = document.querySelector('.message');
+    const currentMessage = document.querySelector(".message");
 
     //if there is already a message there, remove it
     if (currentMessage) {
@@ -38,28 +36,28 @@ class UI {
     }
 
     //create the message
-    const messageDiv = document.createElement('div');
+    const messageDiv = document.createElement("div");
 
     messageDiv.className = className;
     messageDiv.innerHTML = message;
 
     //get parent element
-    const parent = document.querySelector('#main-container');
-    //get form element
-    const form = document.querySelector('#candidate-form');
+    const parent = document.querySelector("#message-location");
 
     //insert the element
-    parent.insertBefore(messageDiv, form);
+    parent.appendChild(messageDiv);
 
     //scroll up to the element
     if (scroll) {
-      messageDiv.scrollIntoView({ behavior: 'smooth' });
+      messageDiv.scrollIntoView({ behavior: "smooth" });
     }
     //disappear after 3 seconds
     window.setTimeout(function () {
       messageDiv.remove();
-    }
-      , 3000);
+    }, 3000);
+
+    //
+    document.getElementById("first-name").focus();
   }
 
   //FUNCTION: clear UI
@@ -82,8 +80,8 @@ class UI {
   //FUNCTION: display results after calculating
   displayResults() {
     //get results table
-    const table = document.querySelector('#results-table');
-    table.innerHTML = '';
+    const table = document.querySelector("#results-table");
+    table.innerHTML = "";
     let person;
     let myHtml;
     let div;
@@ -98,11 +96,11 @@ class UI {
             <li>${person.firstName}: (scored ${person.q1answer}, ${person.q2answer}, ${person.q3answer})</li>
             `;
       }
-      myHtml += '</ul>';
+      myHtml += "</ul>";
 
-      div = document.createElement('div');
+      div = document.createElement("div");
       div.innerHTML = myHtml;
-      div.className = 'group';
+      div.className = "group";
       table.appendChild(div);
     }
   }

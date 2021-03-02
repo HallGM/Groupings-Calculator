@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+      integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Groupings Calculator</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
-    integrity="sha256-2YQRJMXD7pIAPHiXr0s+vlRWA7GYJEK0ARns7k2sbHY=" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Groupings Calculator</title>
-</head>
-
-<body>
-  <div class="container" id="main-container">
-    <h1>Groupings Calculator</h1>
-    <form id="candidate-form">
-      <div id="questionnaire">
-        <div class='input-field'>
-          <label for="first-name">Name:</label>
-          <input type="text" id="first-name" class="">
+  <body>
+    <div class="container" id="main-container">
+      <h1>Groupings Calculator</h1>
+      <form id="candidate-form">
+        <div id="questionnaire">
+          <div class="input-field">
+            <label for="first-name">Name:</label>
+            <input type="text" id="first-name" class="" />
+          </div>
+          <div class="input-field">
+            <label for="question1">Question 1 Answer:</label>
+            <input type="number" id="question1" />
+          </div>
+          <div class="input-field">
+            <label for="question2">Question 2 Answer:</label>
+            <input type="number" id="question2" />
+          </div>
+          <div class="input-field">
+            <label for="question3">Question 3 Answer:</label>
+            <input type="number" id="question3" />
+          </div>
         </div>
-        <div class='input-field'>
-          <label for="question1">Question 1 Answer:</label>
-          <input type="number" id="question1">
-        </div>
-        <div class='input-field'>
-          <label for="question2">Question 2 Answer:</label>
-          <input type="number" id="question2">
-        </div>
-        <div class='input-field'>
-          <label for="question3">Question 3 Answer:</label>
-          <input type="number" id="question3">
-        </div>
-      </div>
-      <input type="submit" value="+ Add Participant">
-    </form>
-    <table id="candidate-list-table" class="u-full-width">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Q1 Answer</th>
-          <th>Q2 Answer</th>
-          <th>Q3 Answer</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody id="candidate-list"></tbody>
-    </table>
-    <form id='random-data'>
-      <input type="submit" value="Fill with Random Data (+8)" class="u-full-width">
-    </form>
-    <form id='calculate-groups'>
-      <input type="submit" value="Calculate" class="u-full-width">
-    </form>
-    <div id="results-table" class="u-full-width"></div>
-  </div>
-  <script src="ui.js"></script>
-  <script src="groupings.js"></script>
-  <script src="name.js"></script>
-  <script src="app.js"></script>
-
-</body>
-
+        <input id="add-participant" type="submit" value="+ Add Participant" />
+      </form>
+      <div id="message-location"></div>
+      <table id="candidate-list-table" class="u-full-width">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Q1 Answer</th>
+            <th>Q2 Answer</th>
+            <th>Q3 Answer</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="candidate-list"></tbody>
+      </table>
+      <form id="random-data">
+        <input
+          type="submit"
+          value="Fill with Random Data (+8)"
+          class="u-full-width"
+        />
+      </form>
+      <form id="calculate-groups">
+        <input type="submit" value="Calculate" class="u-full-width" />
+      </form>
+      <div id="results-table" class="u-full-width"></div>
+    </div>
+    <script src="ui.js"></script>
+    <script src="groupings.js"></script>
+    <script src="name.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
